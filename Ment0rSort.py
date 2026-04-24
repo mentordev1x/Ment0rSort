@@ -12,7 +12,7 @@ class MasaustuDuzenleyici(ctk.CTk):
         super().__init__()
 
         # Pencere Ayarları
-        self.title("Dosya Düzenleyici")
+        self.title("Ment0rSort")
         self.geometry("650x500")
         
         # Dosya Grupları 
