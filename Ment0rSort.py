@@ -3,7 +3,7 @@ import shutil
 import customtkinter as ctk
 from tkinter import filedialog, messagebox
 
-# Uygulama Teması: Modern ve Temiz
+
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("blue")
 
@@ -15,7 +15,7 @@ class MasaustuDuzenleyici(ctk.CTk):
         self.title("Dosya Düzenleyici")
         self.geometry("650x500")
         
-        # Dosya Grupları (Sadeleştirilmiş İsimler)
+        # Dosya Grupları 
         self.gruplar = {
             'Resimler': ['.jpg', '.jpeg', '.png', '.gif', '.svg', '.webp', '.ico', '.heic'],
             'Belgeler': ['.pdf', '.doc', '.docx', '.txt', '.xlsx', '.csv', '.ppt', '.pptx'],
@@ -52,7 +52,7 @@ class MasaustuDuzenleyici(ctk.CTk):
         self.yol_yazisi = ctk.CTkLabel(self.panel, text="Lütfen bir hedef dizin belirleyin.", text_color="#aaaaaa")
         self.yol_yazisi.pack()
 
-        # Süreç Takibi (Log Ekranı)
+        # Log Ekranı
         self.log_ekrani = ctk.CTkTextbox(self.panel, width=550, height=150, font=("Consolas", 12))
         self.log_ekrani.pack(pady=15, padx=15)
         self.log_ekrani.configure(state="disabled")
@@ -108,7 +108,7 @@ class MasaustuDuzenleyici(ctk.CTk):
             if not os.path.exists(yeni_klasor):
                 os.makedirs(yeni_klasor)
 
-            # Çakışma kontrolü
+            # collision kont
             yeni_konum = os.path.join(yeni_klasor, dosya)
             if os.path.exists(yeni_konum):
                 isim, uz = os.path.splitext(dosya)
